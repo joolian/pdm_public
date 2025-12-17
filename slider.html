@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="slider.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!-- <div class="slideshow-container"> -->
+    <div class="slideshow">
+        <!-- Full-width images-->
+        <div class="mySlides fade">
+            <img src="/images/PDM-Rod-Holly.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="/images/PDM-Chloe.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="/images/PDM-strawbear2023_2.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)"><i class="fa fa-chevron-left"></i></a>
+    <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+    <a class="next" onclick="plusSlides(1)"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+    <br>
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- Next and previous buttons -->
+
+<!-- </div> -->
+    <script src="js/public.js"></script>
+</body>
+</html>

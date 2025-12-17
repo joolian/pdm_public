@@ -1,0 +1,137 @@
+h1.homepage {background: transparent; font-size: 400%; margin: 0 }
+div.blackbox 
+{ 
+  text-align:center;  
+  background: black; 
+  color: white;
+  width: 100%; 
+  max-width: 1200px; 
+  margin: auto;
+  padding: 10px 0 50px;
+}
+div.homepage_pic
+{
+  width: 1000px;
+  max-width: 95%;
+  /*background: white;*/
+  background: black;
+  color: black;
+  margin: auto;
+  padding: 5px 0;
+}
+img.homepage_pic
+{
+  display: inline-block;
+  width: 45%;
+  margin: 0;
+}
+
+@media screen and (max-width: 500px)
+{
+  h1.homepage { font-size: 150% } 
+  div.blackbox
+  { width: 100%; max-width: 100% }
+
+}
+
+div.joinus
+{
+  background: white;
+  color: black;
+  padding: 20px 5px;
+  width: 50%;
+  max-width: 95%;
+  max-width: calc(100% - 20px);
+  border: 2px solid red;
+  margin: 10px auto;
+}
+
+div.latestnews
+{
+  border: 2px solid #666; 
+  margin: 10px auto; 
+  padding: 10px;
+  width: 90%; 
+  max-width: 800px;
+  border-radius: 
+  10px; background: white; 
+  color: black
+}
+
+div.nextappearance
+{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: left;
+  border: 2px solid #666; 
+  margin: 10px auto; 
+  padding: 10px;
+  width: 500px;
+  max-width: 90%; 
+  border-radius: 10px; 
+  background: white; 
+  color: black
+}
+
+div.nextappearance h3
+{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-top: 0;
+  text-align: center;
+}
+
+div.nextappearance a
+{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+img.newspic 
+{
+  display: block; 
+  margin: auto; 
+  max-width: 100%;
+}
+
+div.SBFriday
+{
+  background: white;
+  color: black;
+  max-width: 800px;
+  margin: 10px auto;
+  text-align: left;
+  padding: 10px;
+  border: 10px solid #fc0;
+}
+
+div.SBFriday h2
+{
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fe0;
+}
+
+div.SBFriday ul li
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.socials
+{
+  display: flex;
+  justify-content: space-evenly;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  margin: auto;
+  width: 90%;
+  max-width: 800px;
+  text-align: left;
+  padding: 10px;
+}
+
+div.socials a { display: block; text-align: center; text-decoration: none }
+
+div.socials img { vertical-align: middle }

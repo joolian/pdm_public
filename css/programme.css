@@ -1,0 +1,54 @@
+
+
+div.prog-outer
+{
+  padding: 1rem;
+  background: white;
+  width: 80%; 
+  max-width: 800px; 
+  margin: 20px auto;
+  border-radius: 10px; 
+  min-height: 400px
+  color: black;
+}
+
+table.prog
+{
+  border-collapse: collapse;
+  border: thin solid black;
+  border: hidden;
+  width: 88%;
+  margin: 0 auto;
+  color: black;
+}
+
+table.prog tr td
+{
+  vertical-align: top;
+  padding: 0.5rem;
+  border: 1px solid black;
+  background: white;
+  max-width: 50rem;
+
+}
+ table.prog tr td {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-right: none;
+    border-left: none;
+    border-collapse: collapse;
+ }
+table.prog tr td.date { white-space: nowrap;}
+
+table.prog tr.progdate {
+  background: white;
+}
+
+table.prog tr.olddate {
+  background: #ccc;
+}
+
+table.prog tr.olddate td {
+  background: #ccc;
+  color: #666;
+}
