@@ -129,7 +129,6 @@ a.big-button {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 2rem;
-  margin: o.5rem 1rem;
   color: var(--reverse-color);
   background-color: var(--reverse-bg-color);
   text-decoration: none;
@@ -151,13 +150,11 @@ a.big-button {
   max-width: 70rem;
   border: none;
   background-color: var(--reverse-bg-color);
-  padding: 0;
 }
 
 .wide_nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
   background-color: var(--reverse-bg-color);
   display: flex;
   flex-wrap: wrap;
@@ -205,7 +202,7 @@ a.big-button {
 .mob_nav a {
   color: var(--reverse-color);
   background-color: var(--reverse-bg-color);
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   font-size: 1rem;
   display: block;
@@ -245,7 +242,7 @@ a.big-button {
 .youtube {
   position: relative;
   overflow: hidden;
-  width: 75%;
+  width: 90%;
   padding-top: 56.25%;
   margin: auto;
   border: none;
@@ -264,22 +261,24 @@ a.big-button {
 
 /* footer */
 .footer {
+  margin: auto;
+  width: 75%;
+  max-width: 70rem;
+  border: none;
+  background-color: var(--primary-bg-color);
+  border-top: 2px solid var(--primary-color);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
 }
 
 .socials {
   display: flex;
   justify-content: space-evenly;
   background: black;
-  border-top: 2px solid var(--primary-color);
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
   color: var(--primary-color);
-  margin: auto;
-  width: 75%;
-  max-width: 70rem;
   text-align: left;
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 .socials a {
@@ -407,7 +406,7 @@ table.prog tr.olddate td {
   div.wide_nav {
     display: none;
   }
-  div.header, div.content, div.socials, div.slideshow, div.prog-outer {
+  div.header, div.content, div.footer { /*}, div.slideshow, div.prog-outer {*/
     width: 100%;
     max-width: 100%;
   }
