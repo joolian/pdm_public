@@ -1,5 +1,7 @@
 /* gallery.CSS style sheet for public new picture gallery */
 
+
+
 div.gallery-list {
   margin: auto;
   display: grid;
@@ -40,7 +42,7 @@ div.gallery-list {
     display:block;
   }
 }
-form.inlinebutton { display: inline-block; margin: 0 10px;}
+/*form.inlinebutton { display: inline-block; margin: 0 10px;}
 
 form.editbutton input[type=submit],
 form.addbutton input[type=submit]
@@ -145,15 +147,3 @@ div.galnav {
   justify-content: center;
   justify-self: center;
 }
-
-form.returnbutton {
-  margin-bottom: 5px;
-}
-
-form.returnbutton input[type=submit] {
-  background: linear-gradient(white, #ccc);
-}
-
-div.photoframe form.editbutton {
-  margin-bottom: 10px;
- }

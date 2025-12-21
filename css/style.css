@@ -1,0 +1,473 @@
+/* Style sheet for www.pigdyke.co.uk - Pig Dyke Molly */
+
+/* general */
+body 
+{
+  background: white; 
+  background: url(images/swirl.jpg);
+  background-size: cover;
+  color: black; 
+  font-family: Georgia, Palatino, serif;
+  margin: 0;
+}
+
+table { border-collapse: collapse; }
+table tr td { background: white; color: black }
+
+p
+{
+  margin-top: 0.5ex;
+  margin-bottom: 0.5ex;
+}
+
+h1, h2, h3, h4, h5
+{
+  color: white;
+  background: black;
+  padding: 2px;
+  margin: 10px 0 5px;
+}
+
+h1 { font-size: 200%; margin: 0;}
+h2 { font-size: 160% }
+h3 { font-size: 140% }
+h4 { font-size: 120% }
+h5 { font-size: 110% }
+
+@media screen and ( max-width: 500px )
+{
+  h1, h2, h3, h4, h5
+  {
+    padding: 2px;
+    margin: 5px 0 2px;
+  }
+  h1 { font-size: 125% }
+  h2 { font-size: 120% }
+  h3 { font-size: 115% }
+  h4 { font-size: 110% }
+  h5 { font-size: 105% }
+}
+
+/* any main page background */
+.main 
+{ 
+  background: none;
+  color: black; 
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+a.email /* for mailto: links */
+{
+  font-family: monospace; 
+  font-size: 120%; 
+}
+
+.centretext { text-align: center; }
+
+@media screen and ( max-width: 500px )
+{
+  .main { width: 100%; padding: 0;}
+}
+
+div.tail
+{
+  background: black; 
+  color: white; 
+  text-align: center; 
+  border-top: 10px white solid; 
+  border-bottom: 10px solid white; 
+  width: 400px; 
+  max-width: 90%; 
+  margin: 10px auto
+}
+
+div.tail a { text-decoration: none; }
+
+/*
+ * text panels with white background. By default half page width on 
+ *   wider screens
+ */
+div.textpanel
+{
+  display: inline-block;
+  vertical-align: top;
+  background: white;
+  color: black;
+  padding: 20px;
+  width: 40%;
+  width: calc(50% - 70px);
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  overflow: auto;
+}
+
+div.textpanel.fullwidth
+{
+  width: 90%;
+  width: calc(100% - 66px);
+}
+
+@media screen and (max-width: 800px)
+{
+  div.textpanel
+  {
+    display: block;
+    padding: 10px;
+    width: 90%;
+    width: calc(100% - 26px);
+    margin: 10px auto;
+  }
+
+  div.textpanel.fullwidth
+  {
+    width: 95%;
+    width: calc(100% - 10px);
+  }
+}
+
+div.textpanel h2 { margin-top: 0; }
+
+@media screen and (max-width: 500px)
+{
+  div.textpanel 
+  { 
+    padding: 2px; 
+    width: 95%;
+    width: calc(100% - 10px);
+  }
+}
+
+.normal { background: white; color: black; 
+          border: 3px solid black;
+          padding: 10px; margin: 10px }
+
+div.testmode
+{
+  background: red; 
+  font-weight: bold; 
+  font-size: 200%;
+  text-align: center;
+}
+
+/* navigation menu */
+
+div.navmenu-wide
+{
+  border: 6px outset #666;
+  padding: 3px;
+  background: white;
+  margin: 0 5px 5px 5px;
+  text-align: center;
+}
+div.navmenu-narrow { display: none; }
+
+div.navitem,
+div.navitem-special
+{
+  display: inline-block;
+/*  float: left;  */
+/*   width: 150px; */
+  font-family: verdana, arial, sans-serif;
+  font-size: 80%;
+/*  font-weight: bold; */
+  text-align: center;
+  padding: 0 5px;
+  border-right: 2px solid black;
+  border-bottom: 1px solid black;
+  background: #ddd;
+  color: black;
+  margin: 1px 5px;
+}
+
+div.navitem-highlight
+{ 
+  display: inline-block;
+/*   float: left; */
+  font-family: verdana, arial, sans-serif;
+  font-size: 80%;
+/*  font-weight: bold; */
+  text-align: center;
+  padding: 0 5px;
+  background: black;
+  color: white;
+}
+
+div.navitem a
+{
+  text-decoration: none;
+  color: black;
+}
+
+div.navitem-highlight a
+{
+  text-decoration: none;
+  color: white;
+}
+
+div.navitem-special a
+{
+  text-decoration: none;
+  color: #c00;
+}
+
+a.validatorlink { text-decoration: none; }
+@media screen and ( max-width : 500px )
+{
+  div.navmenu-wide { display: none;}
+
+  div.navmenu-narrow
+  {
+    overflow: auto;
+    font-family: verdana, arial, sans-serif;
+    display: block;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    padding: 2px;
+  }
+
+  a.menuiconwrapper
+  {
+    float: right;
+    padding: 2px 20px;
+    color: black;
+    text-decoration: none;
+  }
+
+  div.menuicon
+  {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    height: 20px;
+  }
+
+  div.menuicon div.menuline
+  {
+    display: block;
+    margin: 3px;
+    height: 3px;
+    width: 18px;
+    background: black;
+  }
+
+  div.navitem, div.navitem-highlight, div.navitem-special
+  {
+    display: block;
+    margin: 10px auto;
+    width: max-content;
+    min-width: 50%;
+  }
+} /* narrow screen */
+
+table.reqvars tr td 
+{
+  border: 1px solid #ccc;
+  font-family: monospace;
+  font-size: 80%;
+  padding: 2px;
+  vertical-align: top;
+}
+
+
+/* index page */
+ul.updates
+{
+  margin: 0;
+  padding: 0;
+  background: white;
+  color: black;
+}
+
+ul.updates li
+{
+  padding: 0;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background: #eee;
+}
+
+
+/* programme */
+
+h2.prog
+{
+  width: 90%;
+  margin: 2px auto 2px;
+  background: white;
+  border-radius: 20px;
+  color: black;
+  text-align: center;
+}
+
+
+/* gallery */
+
+/*div.thumb
+{
+  float: left;
+  text-align: center;
+  border: thin solid black;
+  height: 150px;
+  padding: 3px;
+  margin-bottom: 3px;
+}*/
+ 
+img.thumb
+{
+  border: 1px solid white;
+}
+
+table.youtube tr td
+{
+  background: white;
+  padding-right: 20px;
+
+}
+
+
+/* news */
+table.news
+{
+  background:  white;
+  border-collapse: collapse;
+}
+
+table.news tr
+{
+  margin-top: 10px;
+}
+
+table.news tr td
+{
+  background: transparent;
+  padding: 10px;
+  border-bottom: 5px solid black;
+}
+
+table.news tr td.date
+{
+  /* white-space: nowrap; */
+  border-right: thin solid white;
+  vertical-align: top;
+}
+
+table.news tr td h3
+{
+  margin: 0 0 10px;
+  padding: 0;
+  color: black;
+  background: white;
+  font-size: 120%;
+}
+
+div.shadowbox
+{
+  border-top: 1px #666 solid;
+  border-left: 1px #666 solid;
+  border-right: 5px #666 solid;
+  border-bottom: 5px #666 solid;
+  margin: 10px;
+  padding: 5px;
+  background: white;
+}
+
+@media screen and ( max-width: 500px)
+{
+  div.shadowbox { margin: 10px 0 }
+}
+
+
+
+h1.print, h2.print, h3.print, h4.print
+{
+  background: white;
+  color: black;
+}
+form.inlinebutton { display: inline-block; margin: 0 10px;}
+
+form.editbutton input[type=submit],
+form.addbutton input[type=submit]
+{
+  background: linear-gradient(#efe, #afa)
+}
+
+form.spacedbutton { margin: 10px 0 }
+form.delbutton input[type=submit]
+{
+  background: linear-gradient(white, #f66);
+} 
+
+/* error pages */
+body.errorpage
+{
+  background: black; 
+  color: white; 
+  text-align: center;
+}
+body.errorpage h1
+{
+  margin: 20px 0;
+}
+div.errorpage
+{
+  width: 600px;
+  max-width: 90%;
+  border: thin solid white; 
+  margin: 10px auto;
+}
+div.errorpage div.footer
+{
+  margin-top: 10px;
+  background: white; 
+  color: black; 
+  padding: 5px
+}
+div.errorpage span.email
+{
+  display: block; 
+  margin: auto; 
+  max-width: 100%
+}
+
+/*********** message and error boxes ***********/
+div.errorbox, div.msgbox
+{
+  width: max-content;
+  max-width: 90%;
+  margin: 10px;
+  padding: 10px;
+  background: white;
+  font-family: sans-serif;
+  border-radius: 10px;
+}
+
+div.errorbox
+{
+  border: 3px solid #900;
+  color: #900;
+  background: #fff4f4;
+}
+div.msgbox
+{
+  border: 3px solid #090;
+  color: #090;
+  background: #f4fff4;
+}
+
+/**************** general datarec form ***********/
+
+form.datarec_form { background: #ccc; margin: 5px; padding: 10px; }
+div.form_input_pair { display: grid; grid-template-columns: 1fr 5fr;    
+  background: #ccc; margin: 10px 0;}
+div.form_input_pair div.input input[type=text], div.form_input_pair div.input textarea {
+  width: 99%
+ }
+form.datarec_form input[type=submit] 
+{ 
+  background: linear-gradient(white, lightgreen)
+}

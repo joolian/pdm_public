@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page | Pig Dyke Molly</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Anahata <anahata@treewind.co.uk>" name="Author">
+    <meta content="Pig Dyke, Pig Dyke Molly, molly dancers,
+    molly dance, folk dance, molly dancing, dance classes, dance group,
+    Peterborough, Fenland" name="keywords">
+    <meta content="Pig Dyke Molly are a Molly Dance team based in Peterborough, famous for their black and white attire and facepaint, and quirky dances and music."
+          name="description">
+    <link href="css/public.css" rel="stylesheet">
+    <link href="css/gallery.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://pigdyke.co.uk/gallery' rel='canonical'>
+</head>
+<body>
+  <div class="header">
+      <div class="logo">
+          <h1>Pig Dyke Molly  <span>Dancers from the Fens in Glorious Black and White</span></h1>
+      </div>
+      <div class="sign-in-link">
+          <p><a class="sign-in-button" href="private/" title="members only (login required)">Sign in</a></p>
+      </div>
+  </div>
+  <div class="wide_nav">
+      <ul>
+          <li><a href="index.html" title="index">Home</a></li>
+          <li><a href="join_us.html" title="Join">Join</a></li>
+          <li><a href="/what-is-molly" title="History of Molly
+      Dancing and Pig Dyke, and collected dance notation and music">What is Molly</a></li>
+          <li><a href="programme.html" title="Where to see us: festivals, pub nights etc.">Programme</a></li>
+          <li><a class="active "href="gallery.html" title="Photo Gallery">Gallery</a></li>
+          <li><a href="/videos" title="Videos, You Tube and other">Video</a></li>
+          <li><a href="/music" title="Music: history, Band, CDs, downloads">Music</a></li>
+          <li><a href="/dance" title="Collected Dance Notation and Music">Dance</a></li>
+          <li><a href="/news" title="News about Pig Dyke, quotes from the press and
+      bystanders">News</a></li>
+          <li><a href="/quotes" title="Things people have said about us">Quotes</a></li>
+          <li><a href="/contact" title="Where we practice, how to contact us and
+      links to our friends">Contact</a></li>
+      </ul>
+  </div>
+  <div class="mob_nav">
+          <a href="Index" class="active" title="Pig Dyke Molly">Home</a>
+    <div id="menuLinks">
+        <a href="index.html">Home</a>
+        <a href="join_us.html" title="Join">Join</a>
+        <a href="/what-is-molly" title="History of Molly">What is Molly</a>
+        <a href="programme.html" title="Where to see us: festivals, pub nights etc.">Programme</a>
+        <a class="active" href="gallery.html" title="Photo Gallery">Gallery</a>
+        <a href="/videos" title="Videos, You Tube and other">Video</a>
+        <a href="/music" title="Music: history, Band, CDs, downloads">Music</a>
+        <a href="/dance" title="Collected Dance Notation and Music">Dance</a>
+        <a href="/news" title="News about Pig Dyke, quotes from the press and
+      bystanders">News</a>
+          <a href="/quotes" title="Things people have said about us">Quotes</a>
+          <a href="/contact" title="Where we practice, how to contact us and
+      links to our friends">Contact</a>
+          <a href="private/" title="members only (login required)">Private</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="content">
+    <h1>Photo Gallery</h1>
+    <div>
+      <p>adding to gallery 1</p>
+      <form action="/gallery" method="POST" enctype="multipart/form-data" class="datarec_form photo">
+        <input type="hidden" name="action" value="photo_add_submit"><input type="hidden" name="id" value=""><input type="hidden" name="csrftoken" value="eVIQ3HKm0dyNXHIVXqo4AAhXpuC7DiZyeDlgWhvO">
+        <input type="hidden" name="gallery" value="1">
+        <div class="form_input_pair ">
+          <div class="label">
+            Title
+          </div>
+          <div class="input">
+            <input  type="text" name="title" value="" size="50" maxlength="50" required class="title">
+          </div>
+        </div>
+        <div class="form_input_pair ">
+          <div class="label">
+            Photo Caption (longer description, optional)
+          </div>
+          <div class="input">
+            <textarea name=caption rows="4" cols="80"></textarea>
+          </div>
+        </div>
+        <div class="form_input_pair ">
+          <div class="label">
+            Uploader
+          </div>
+          <div class="input">
+            <input  type="text" name="uploader" value="Julian" size="100" maxlength="100">
+          </div>
+        </div>
+        <div class="form_input_pair ">
+          <div class="label">
+            Image file
+          </div>
+          <div class="input">
+            <input type="file" name="photofile" size="100" maxlength="100" class="form_input" >
+          </div>
+        </div>
+        <input type="submit" value="Add">
+      </form>
+      <form action="/gallery" method="GET" class="cancelbutton">
+        <input type="submit" value="Cancel" >
+      </form>
+    </div>
+  </div>
+<div class="footer">
+    <div class="socials">
+        <a href="https://bsky.app/profile/pigdykemolly.bsky.social"><img alt="BlueSky logo"
+                                                                         src="images/bluesky_white_50.png">
+            BlueSky</a>
+        <a href="https://www.facebook.com/PigDyke"><img alt="Facebook logo" src="images/facebook_white_50.png">
+            Facebook
+        </a>
+        <a href="https://www.tiktok.com/@pdmolly"><img alt="TikTok logo" src="images/tiktok_white_50.png">
+            TikTok
+        </a>
+        <a href="https://www.instagram.com/pigdykemolly/"><img alt="Instagram logo"
+                                                               src="images/instagram_white_50.png">
+            Instagram
+        </a>
+    </div>
+</div>
+<script src="js/public.js"></script>
+</body>
+</html>
