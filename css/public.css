@@ -16,8 +16,14 @@
   --fs-4: clamp(1.95rem, calc(1.81rem + 0.71vw), 2.66rem)
 }
 
+html {
+    margin: 0;
+    padding: 0;
+}
+
 * {
   box-sizing: border-box;
+  font-family: inherit;
 }
 
 h1{
@@ -46,7 +52,9 @@ body {
   font-family: Verdana, Arial, sans-serif;
   color: var(--primary-color);
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 70rem;
 }
 
 h1, h2, h3 {
@@ -75,7 +83,6 @@ a:hover {
 
 .big-link {
   text-align: center;
-  margin: 3rem 1rem;
 }
 
 .big-link a {
@@ -84,9 +91,6 @@ a:hover {
 
 /* header */
 .header {
-  margin: 0 auto;
-  width: 75%;
-  max-width: 70rem;
   background-color: var(--reverse-bg-color);
   display: flex;
   justify-content: space-between;
@@ -114,18 +118,39 @@ a:hover {
   padding-right: var(--fs-1);
 }
 
-a.button {
+a.sign-in-button {
   font-size: var(--fs-1);
-  padding: 0.5rem;
+  padding: 0.3rem 0.5rem;
   border: none;
   border-radius: 1rem;
   color: var(--primary-color);
   background-color: var(--primary-bg-color);
   text-decoration: none;
+  cursor: pointer;
+}
+
+.forms {
+  gap: 1rem;
+  width: 75%;
+  max-width: 75rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* form.button input[type=submit] {*/
+.button {
+  font-size: var(--fs-1);
+  padding: .3rem 1rem;
+  border: none;
+  border-radius: 1rem;
+  color: var(--reverse-color);
+  background-color: var(--reverse-bg-color);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 a.big-button {
-  font-size: var(--fs-3);
+  font-size: var(--fs-2);
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 2rem;
@@ -135,9 +160,6 @@ a.big-button {
 }
 
 .content {
-  margin: auto;
-  width: 75%;
-  max-width: 70rem;
   border: none;
   background-color: var(--primary-bg-color);
   padding: 1.25rem;
@@ -145,20 +167,17 @@ a.big-button {
 
 /* Wide navigation menu */
 .wide_nav {
-  margin: 0 auto;
-  width: 75%;
-  max-width: 70rem;
   border: none;
   background-color: var(--reverse-bg-color);
 }
 
 .wide_nav ul {
   list-style-type: none;
-  margin: 0;
   background-color: var(--reverse-bg-color);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0;
 }
 
 .wide_nav ul li a {
@@ -174,7 +193,7 @@ a.big-button {
 }
 
 .wide_nav ul li a:link {
-  color: ar(--reverse-color);
+  color: var(--reverse-color);
 }
 
 .wide_nav ul li a:hover {
@@ -261,9 +280,6 @@ a.big-button {
 
 /* footer */
 .footer {
-  margin: auto;
-  width: 75%;
-  max-width: 70rem;
   border: none;
   background-color: var(--primary-bg-color);
   border-top: 2px solid var(--primary-color);
@@ -293,12 +309,16 @@ a.big-button {
 }
 
 /* slideshow */
+.slideshow-container {
+  margin: 2rem auto;
+}
+
 .slideshow {
   max-width: 616px;
   padding: 0 2rem;
   position: relative;
   margin: auto;
-  margin; 1rem;
+
 }
 
 .mySlides {
@@ -332,7 +352,7 @@ a.big-button {
   cursor: pointer;
   height: 1rem;
   width: 1rem;
-  margin: 0.5rem 0.5rem;
+  /*margin: 0.5rem 0.5rem;*/
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -358,9 +378,8 @@ a.big-button {
 
 div.prog-outer {
   background: var(--primary-bg-color);
-  width: 80%;
-  max-width: 80%;
-  margin: 1rem auto;
+  max-width: 50rem;
+  margin: 0 auto;
   color: var(--primary-color);
 }
 
@@ -370,7 +389,6 @@ table.prog {
   border-top: 2px solid var(--primary-color);
   border-right: none;
   border-left: none;
-  margin: 0 auto;
   color: var(--primary-color);
 }
 
@@ -388,15 +406,15 @@ table.prog tr td.date {
   white-space: nowrap;
 }
 
-table.prog tr.progdate {
+table.prog tr.prog-date {
   background: var(--primary-bg-color);
 }
 
-table.prog tr.olddate {
+table.prog tr.old-date {
   background: #ccc;
 }
 
-table.prog tr.olddate td {
+table.prog tr.old-date td {
   background: #ccc;
   color: #666;
 }
@@ -406,9 +424,8 @@ table.prog tr.olddate td {
   div.wide_nav {
     display: none;
   }
-  div.header, div.content, div.footer { /*}, div.slideshow, div.prog-outer {*/
+  body {
     width: 100%;
-    max-width: 100%;
   }
 }
 

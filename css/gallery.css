@@ -1,66 +1,60 @@
 /* gallery.CSS style sheet for public new picture gallery */
 
-div.textpanel.gallery {
-  display: block;
+div.gallery-list {
   margin: auto;
-  width: 90%;
-  max-width: 1500px;
-  background: var(--primary-bg-color);
-}
-
-/*@media (max-width: 500px)
-{
-  div.textpanel.gallery
-  {
-    width: auto;
-  }
-}*/
-
-div.gallerylist {
-  margin: 40px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 0 20px;
+  gap: 0 1rem;
   height: auto;
 }
 
-.gallerylink i {
+.gallery-link i {
   font-size: var(--fs-2);
   color: var(--primary-color);
   padding-right: 2rem;
 }
 
-.gallerylink a {
+.gallery-link a {
   display: block;
-  padding: 1rem;
+  padding: 0.75rem;
   color: var(--primary-link-color);
 }
 
-.gallerylink a:visited {
+.gallery-link a:visited {
   color: var(--primary-link-visited-color);
 }
 
-.gallerylink a:hover {
+.gallery-link a:hover {
   color: var(--primary-link-hover-color);
 }
 
 @media (max-width: 1000px) {
-  div.gallerylist
-  {
+  div.gallery-list {
     grid-template-columns: 1fr 1fr;
-    font-size: 95%;
   }
-  div.gallerylink a { margin: 2px 0 }
 }
 
-@media (max-width: 600px) {
-  div.gallerylist
+@media (max-width: 480px) {
+  div.gallery-list
   {
     display:block;
   }
 }
+form.inlinebutton { display: inline-block; margin: 0 10px;}
 
-form.addgalbutton input[type=submit], form.addphotobutton input[type=submit] {
+form.editbutton input[type=submit],
+form.addbutton input[type=submit]
+{
+  background: linear-gradient(#efe, #afa)
+}
+
+form.spacedbutton { margin: 10px 0 }
+form.delbutton input[type=submit]
+{
+  background: linear-gradient(white, #f66);
+}
+
+/*form.addgalbutton input[type=submit], form.addphotobutton input[type=submit] {
   font-size: font-size: var(--fs-1);
   margin: 1rem 0;
   padding: 0.5rem;
@@ -70,7 +64,7 @@ form.addgalbutton input[type=submit], form.addphotobutton input[type=submit] {
   background-color: var(--reverse-bg-color);
   text-decoration: none;
   cursor: pointer;
-}
+}*/
 
 form.delbutton {
   margin: 10px 0
@@ -81,32 +75,36 @@ form input.title {
 }
 
 div.galdetails {
-  background: white;
-  color: #333;
-  padding: 10px;
-  margin: 10px 0;
 }
 
 div.gal_container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 1rem;
 }
 
-div.gal_container div.thumb {
+div.thumb {
   height: auto;
-  background: white;
-  border: thin solid #999;
-  border-radius: 5px;
-  padding: 3px;
+  background: black;
+  border: none;
+  border-radius: 0.5rem;
   text-align: center;
-} 
+  color: white;
+  padding: 1rem;
+}
 
-div.gal_container div.thumb img {
+div.thumb a {
+display: block;
+padding: 1rem;
+margin: auto;
+}
+
+div.thumb img {
   display: block; 
   margin: auto;
-  height: 133px;
+  height: 150px;
 }
+
 
 div.photoframe {
   width: auto;
@@ -117,12 +115,12 @@ div.photoframe {
   margin: auto;
 }
 
-@media (max-width: 500px) {
+<!-- @media (max-width: 480px) {
   div.photoframe { padding: 10px 0 }
   div.gal_container { font-size: 90%; gap: 2px }
   div.gal_container div.thumb { max-width: 140px }
   div.gal_container div.thumb img { height: 100px }
-}
+} -->
 
 img.photo {
   max-width: 100%;
@@ -139,13 +137,6 @@ div.photo_info {
   font-size: 100%;
   margin: 10px 0;
 }
-
-/*
-@media (max-width: 500px)
-{
-  div.photo_info { display: block; }
-}
-  */
 
 div.galnav {
   margin: auto;
