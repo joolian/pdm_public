@@ -7,7 +7,9 @@
   --primary-color: #ffffff;
   --reverse-bg-color: #ffffff;
   --reverse-color: #000000;
+  --warning-color: #E7180B;
   --primary-link-color: #5A9CED;
+  --greyed-bg-colr: #CCD1D1;
   --primary-link-hover-color: #388df5;
   --primary-link-visited-color: #83b2eb;
   --fs-1: clamp(1.00rem, calc(0.98rem + 0.13vw), 1.13rem);;
@@ -411,7 +413,7 @@ table.prog tr.prog-date {
 }
 
 table.prog tr.old-date {
-  background: #ccc;
+  background: var(--greyed-bg-color);
 }
 
 table.prog tr.old-date td {
@@ -509,13 +511,12 @@ div.msgbox
   background-color: var(--reverse-bg-color);
 }
 
-.add-button {
-  margin: 1rem 0;
+input[type="submit"].submit-button {
+  margin: 1rem 0 0.5rem 0;
 }
 
-.cancel-button {
-  display: block;
-  text-align: right;
+input[type="submit"].warning{
+  color: var(--warning-color);
 }
 
 form div.form-input-pair {
@@ -530,10 +531,13 @@ form div.form-input-pair > div {
 
 input[type=text] {
   font-size: var(--fs-1);
+  width: 40rem;
+  max-width: 95%
 }
 
 textarea {
     width: 40rem;
+    height: calc(3 * 1.5 * var(--fs-1));
     font-size: var(--fs-1);
     max-width: 95%;
 }

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page | Pig Dyke Molly</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Anahata <anahata@treewind.co.uk>" name="Author">
+    <meta content="Pig Dyke, Pig Dyke Molly, molly dancers,
+    molly dance, folk dance, molly dancing, dance classes, dance group,
+    Peterborough, Fenland" name="keywords">
+    <meta content="Pig Dyke Molly are a Molly Dance team based in Peterborough, famous for their black and white attire and facepaint, and quirky dances and music."
+          name="description">
+    <link href="css/public.css" rel="stylesheet">
+    <link href="css/gallery.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://pigdyke.co.uk/gallery' rel='canonical'>
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <h1>Pig Dyke Molly <span>Dancers from the Fens in Glorious Black and White</span></h1>
+    </div>
+    <div class="sign-in-link">
+        <p><a class="sign-in-button" href="private/" title="members only (login required)">Sign in</a></p>
+    </div>
+</div>
+<div class="wide_nav">
+    <ul>
+        <li><a href="index.html" title="index">Home</a></li>
+        <li><a href="join_us.html" title="Join">Join</a></li>
+        <li><a href="/what-is-molly" title="History of Molly
+      Dancing and Pig Dyke, and collected dance notation and music">What is Molly</a></li>
+        <li><a href="programme.html" title="Where to see us: festivals, pub nights etc.">Programme</a></li>
+        <li><a class="active " href="gallery.html" title="Photo Gallery">Gallery</a></li>
+        <li><a href="/videos" title="Videos, You Tube and other">Video</a></li>
+        <li><a href="/music" title="Music: history, Band, CDs, downloads">Music</a></li>
+        <li><a href="/dance" title="Collected Dance Notation and Music">Dance</a></li>
+        <li><a href="/news" title="News about Pig Dyke, quotes from the press and
+      bystanders">News</a></li>
+        <li><a href="/quotes" title="Things people have said about us">Quotes</a></li>
+        <li><a href="/contact" title="Where we practice, how to contact us and
+      links to our friends">Contact</a></li>
+    </ul>
+</div>
+<div class="mob_nav">
+    <a class="active" href="Index" title="Pig Dyke Molly">Home</a>
+    <div id="menuLinks">
+        <a href="index.html">Home</a>
+        <a href="join_us.html" title="Join">Join</a>
+        <a href="/what-is-molly" title="History of Molly">What is Molly</a>
+        <a href="programme.html" title="Where to see us: festivals, pub nights etc.">Programme</a>
+        <a class="active" href="gallery.html" title="Photo Gallery">Gallery</a>
+        <a href="/videos" title="Videos, You Tube and other">Video</a>
+        <a href="/music" title="Music: history, Band, CDs, downloads">Music</a>
+        <a href="/dance" title="Collected Dance Notation and Music">Dance</a>
+        <a href="/news" title="News about Pig Dyke, quotes from the press and
+      bystanders">News</a>
+        <a href="/quotes" title="Things people have said about us">Quotes</a>
+        <a href="/contact" title="Where we practice, how to contact us and
+      links to our friends">Contact</a>
+        <a href="private/" title="members only (login required)">Private</a>
+    </div>
+    <a class="icon" href="javascript:void(0);" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+<div class="content">
+    <h1>Edit Gallery</h1>
+    <div class="form-container">
+        <form action="/gallery" method="POST">
+            <input name="action" type="hidden" value="gallery_edit_submit">
+            <input name="id" type="hidden" value="1">
+            <input name="csrftoken" type="hidden" value="kLsaboOgKt2PWkmuu1tfP9Wbyztmw3XAlc5Ut2fg">
+            <div class="form-input-pair ">
+                <div>
+                    Gallery Name
+                </div>
+                <div>
+                    <input name="name" required type="text" value="The Archives - very old pics">
+                </div>
+            </div>
+            <div class="form-input-pair ">
+                <div>
+                    Details
+                </div>
+                <div>
+            <textarea name=details>An assortment of pictures from the very early days of Yaxley Morris/Pig Dyke Molly.&lt;br&gt;&amp;copy; Some pictures reproduced courtesy of The Peterborough Evening Telegraph.
+            </textarea>
+                </div>
+            </div>
+            <input class="submit-button" type="submit" value="Update">
+        </form>
+        <form action="/gallery" method="POST">
+            <input name="id" type="hidden" value="1">
+            <input name="csrftoken" type="hidden" value="kLsaboOgKt2PWkmuu1tfP9Wbyztmw3XAlc5Ut2fg">
+            <input name="action" type="hidden" value="gallery&lowbar;delete">
+            <input class="submit-button warning" type="submit" value="Delete">
+        </form>
+        <form action="/gallery" method="GET">
+            <input class="submit-button" type="submit" value="Cancel">
+        </form>
+    </div>
+</div>
+<div class="footer">
+    <div class="socials">
+        <a href="https://bsky.app/profile/pigdykemolly.bsky.social"><img alt="BlueSky logo"
+                                                                         src="images/bluesky_white_50.png">
+            BlueSky</a>
+        <a href="https://www.facebook.com/PigDyke"><img alt="Facebook logo" src="images/facebook_white_50.png">
+            Facebook</a>
+        <a href="https://www.tiktok.com/@pdmolly"><img alt="TikTok logo" src="images/tiktok_white_50.png">
+            TikTok</a>
+        <a href="https://www.instagram.com/pigdykemolly/"><img alt="Instagram logo"
+                                                               src="images/instagram_white_50.png">
+            Instagram</a>
+    </div>
+</div>
+<script src="js/public.js"></script>
+</body>
+</html>
