@@ -138,7 +138,7 @@ a.sign-in-button {
 }
 
 /* form.button input[type=submit] {*/
-.button {
+/*.button {
   font-size: var(--fs-1);
   padding: .3rem 1rem;
   border: none;
@@ -147,7 +147,7 @@ a.sign-in-button {
   background-color: var(--reverse-bg-color);
   text-decoration: none;
   cursor: pointer;
-}
+}*/
 
 a.big-button {
   font-size: var(--fs-2);
@@ -496,7 +496,10 @@ div.msgbox
 }
 
 /**************** general datarec form ***********/
-
+.form-container {
+  width: 40rem;
+  max-width: 95%;
+}
 ::file-selector-button, input[type="submit"] {
   font-size: var(--fs-1);
   padding: .3rem 1rem;
@@ -506,29 +509,31 @@ div.msgbox
   background-color: var(--reverse-bg-color);
 }
 
-form.datarec_form {
-  background: var(--primary-bg-color);
+.add-button {
+  margin: 1rem 0;
 }
 
-div.form_input_pair {
-  display: grid;
-  grid-template-columns: 2fr 4fr;
-  column-gap: 1rem;
+.cancel-button {
+  display: block;
+  text-align: right;
+}
+
+form div.form-input-pair {
   background: var(--primary-bg-color);
   color: var(--primary-color);
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
-div.form_input_pair div.input input[type=text], div.form_input_pair div.input textarea {
-  width: 95%;
+form div.form-input-pair > div {
+   margin: 0.5rem 0;
 }
 
-.cancelbutton {
-    margin: 2rem 0;
+input[type=text] {
+  font-size: var(--fs-1);
 }
 
-/*
-form.datarec_form input[type=submit] {
-  background: linear-gradient(white, lightgreen)
+textarea {
+    width: 40rem;
+    font-size: var(--fs-1);
+    max-width: 95%;
 }
-*/

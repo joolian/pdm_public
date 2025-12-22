@@ -65,47 +65,47 @@
     </a>
   </div>
   <div class="content">
-    <h1>Photo Gallery</h1>
-    <div>
-      <p>adding to gallery 1</p>
-      <form action="/gallery" method="POST" enctype="multipart/form-data" class="datarec_form photo">
+    <h1>Add photo</h1>
+    <div class="form-container">
+      <p>Adding to gallery 1</p>
+      <form action="/gallery" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="action" value="photo_add_submit"><input type="hidden" name="id" value=""><input type="hidden" name="csrftoken" value="eVIQ3HKm0dyNXHIVXqo4AAhXpuC7DiZyeDlgWhvO">
         <input type="hidden" name="gallery" value="1">
-        <div class="form_input_pair ">
-          <div class="label">
+        <div class="form-input-pair">
+          <div>
             Title
           </div>
-          <div class="input">
-            <input  type="text" name="title" value="" size="50" maxlength="50" required class="title">
+            <div>
+            <input  type="text" name="title" value="required">
           </div>
         </div>
-        <div class="form_input_pair ">
-          <div class="label">
+        <div class="form-input-pair">
+          <div>
             Photo Caption (longer description, optional)
           </div>
-          <div class="input">
-            <textarea name=caption rows="4" cols="80"></textarea>
+          <div>
+            <textarea name=caption></textarea>
           </div>
         </div>
-        <div class="form_input_pair ">
-          <div class="label">
+        <div class="form-input-pair">
+          <div>
             Uploader
           </div>
-          <div class="input">
-            <input  type="text" name="uploader" value="Julian" size="100" maxlength="100">
+          <div>
+            <input  type="text" name="uploader" value="Julian">
           </div>
         </div>
-        <div class="form_input_pair ">
-          <div class="label">
+        <div class="form-input-pair">
+          <div>
             Image file
           </div>
-          <div class="input">
-            <input type="file" name="photofile" size="100" maxlength="100" class="form_input" >
+          <div>
+            <input type="file" name="photofile">
           </div>
         </div>
-        <input type="submit" value="Add">
+        <input class="add-button" type="submit" value="Add photo">
       </form>
-      <form action="/gallery" method="GET" class="cancelbutton">
+      <form class="cancel-button" action="/gallery" method="GET">
         <input type="submit" value="Cancel" >
       </form>
     </div>
