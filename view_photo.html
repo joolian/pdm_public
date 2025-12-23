@@ -11,7 +11,7 @@
     <meta content="Pig Dyke Molly are a Molly Dance team based in Peterborough, famous for their black and white attire and facepaint, and quirky dances and music."
           name="description">
     <link href="css/public.css" rel="stylesheet">
-    <link href="css/gallery.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/gallery.css" rel="stylesheet" type="text/css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://pigdyke.co.uk/gallery' rel='canonical'>
 </head>
@@ -29,17 +29,17 @@
         <li><a href="index.html" title="index">Home</a></li>
         <li><a href="join_us.html" title="Join">Join</a></li>
         <li><a href="/what-is-molly" title="History of Molly
-      Dancing and Pig Dyke, and collected dance notation and music">What is Molly</a></li>
+    Dancing and Pig Dyke, and collected dance notation and music">What is Molly</a></li>
         <li><a href="programme.html" title="Where to see us: festivals, pub nights etc.">Programme</a></li>
         <li><a class="active " href="gallery.html" title="Photo Gallery">Gallery</a></li>
         <li><a href="/videos" title="Videos, You Tube and other">Video</a></li>
         <li><a href="/music" title="Music: history, Band, CDs, downloads">Music</a></li>
         <li><a href="/dance" title="Collected Dance Notation and Music">Dance</a></li>
         <li><a href="/news" title="News about Pig Dyke, quotes from the press and
-      bystanders">News</a></li>
+    bystanders">News</a></li>
         <li><a href="/quotes" title="Things people have said about us">Quotes</a></li>
         <li><a href="/contact" title="Where we practice, how to contact us and
-      links to our friends">Contact</a></li>
+    links to our friends">Contact</a></li>
     </ul>
 </div>
 <div class="mob_nav">
@@ -54,10 +54,10 @@
         <a href="/music" title="Music: history, Band, CDs, downloads">Music</a>
         <a href="/dance" title="Collected Dance Notation and Music">Dance</a>
         <a href="/news" title="News about Pig Dyke, quotes from the press and
-      bystanders">News</a>
+    bystanders">News</a>
         <a href="/quotes" title="Things people have said about us">Quotes</a>
         <a href="/contact" title="Where we practice, how to contact us and
-      links to our friends">Contact</a>
+    links to our friends">Contact</a>
         <a href="private/" title="members only (login required)">Private</a>
     </div>
     <a class="icon" href="javascript:void(0);" onclick="myFunction()">
@@ -65,56 +65,61 @@
     </a>
 </div>
 <div class="content">
-    <h1>Edit Gallery</h1>
-    <div class="form-container">
-        <form action="/gallery" method="POST">
-            <input name="action" type="hidden" value="gallery_edit_submit">
+    <h1>Photo Gallery</h1>
+    <div class="gal-nav">
+
+    <!--
+    For the first image in the gallery there will be no back button, so &nbsp
+    is used instead to ensure the grid used to display the submit buttons will have
+    three columns
+    -->
+
+        <form action="/gallery" method="GET">
             <input name="id" type="hidden" value="1">
-            <input name="csrftoken" type="hidden" value="kLsaboOgKt2PWkmuu1tfP9Wbyztmw3XAlc5Ut2fg">
-            <div class="form-input-pair ">
-                <div>
-                    Name:
-                </div>
-                <div>
-                    <input name="name" required type="text" value="The Archives - very old pics">
-                </div>
-            </div>
-            <div class="form-input-pair ">
-                <div>
-                    Description:
-                </div>
-                <div>
-            <textarea name=details>An assortment of pictures from the very early days of Yaxley Morris/Pig Dyke Molly.&lt;br&gt;&amp;copy; Some pictures reproduced courtesy of The Peterborough Evening Telegraph.
-            </textarea>
-                </div>
-            </div>
-            <input class="submit-button" type="submit" value="Update">
-        </form>
-        <form action="/gallery" method="POST">
-            <input name="id" type="hidden" value="1">
-            <input name="csrftoken" type="hidden" value="kLsaboOgKt2PWkmuu1tfP9Wbyztmw3XAlc5Ut2fg">
-            <input name="action" type="hidden" value="gallery&lowbar;delete">
-            <input class="submit-button warning" type="submit" value="Delete">
+            <input name="action" type="hidden" value="show&lowbar;photo">
+            <input class="submit-button" type="submit" value="<">
         </form>
         <form action="/gallery" method="GET">
-            <input class="submit-button" type="submit" value="Cancel">
+            <input name="id" type="hidden" value="1">
+            <input name="action" type="hidden" value="show&lowbar;gallery">
+            <input class="submit-button" type="submit" value="Return to Gallery">
+        </form>
+        <form action="/gallery" method="GET">
+            <input name="id" type="hidden" value="3">
+            <input name="action" type="hidden" value="show&lowbar;photo">
+            <input class="submit-button" type="submit" value=">">
         </form>
     </div>
-</div>
-<div class="footer">
-    <div class="socials">
-        <a href="https://bsky.app/profile/pigdykemolly.bsky.social"><img alt="BlueSky logo"
-                                                                         src="images/bluesky_white_50.png">
-            BlueSky</a>
-        <a href="https://www.facebook.com/PigDyke"><img alt="Facebook logo" src="images/facebook_white_50.png">
-            Facebook</a>
-        <a href="https://www.tiktok.com/@pdmolly"><img alt="TikTok logo" src="images/tiktok_white_50.png">
-            TikTok</a>
-        <a href="https://www.instagram.com/pigdykemolly/"><img alt="Instagram logo"
-                                                               src="images/instagram_white_50.png">
-            Instagram</a>
+
+    <div class="photo-info">
+        <div>Gallery:</div>
+        <div>The Archives - very old pics</div>
     </div>
+    <div class="photo-info">
+        <div>Title:</div>
+        <div>1993</div>
+    </div>
+    <div class="photo-info">
+        <div>Description:</div>
+        <div>
+            1993 &copy; Reproduced by courtesy of the <a href="http://www.peterboroughtoday.co.uk/">Peterborough
+            Evening Telegraph</a>
+        </div>
+    </div>
+    <div class="photo-info">
+        <div>Uploaded by:</div>
+        <div>Anahata</div>
+    </div>
+    <form action="/gallery" method="GET">
+        <input name="id" type="hidden" value="2">
+        <input name="action" type="hidden" value="photo&lowbar;edit&lowbar;form">
+        <input class="submit-button" type="submit" value="Edit">
+    </form>
+    <picture>
+        <source srcset='images/gallery_test/photos/1.avif' type='image/avif'>
+        <img class="photo" alt="1993 &copy; Reproduced by courtesy of the Peterborough Evening Telegraph"
+             src="pics/2.jpg">
+    </picture>
 </div>
-<script src="js/public.js"></script>
 </body>
 </html>

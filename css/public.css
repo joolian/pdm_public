@@ -131,24 +131,13 @@ a.sign-in-button {
   cursor: pointer;
 }
 
+/*
 .forms {
   gap: 1rem;
   width: 75%;
   max-width: 75rem;
   display: flex;
   flex-wrap: wrap;
-}
-
-/* form.button input[type=submit] {*/
-/*.button {
-  font-size: var(--fs-1);
-  padding: .3rem 1rem;
-  border: none;
-  border-radius: 1rem;
-  color: var(--reverse-color);
-  background-color: var(--reverse-bg-color);
-  text-decoration: none;
-  cursor: pointer;
 }*/
 
 a.big-button {
@@ -473,6 +462,7 @@ div.errorpage span.email
 }
 
 /*********** message and error boxes ***********/
+/* taken from original style.css */
 div.errorbox, div.msgbox
 {
   width: max-content;
@@ -522,6 +512,7 @@ input[type="submit"].warning{
 form div.form-input-pair {
   background: var(--primary-bg-color);
   color: var(--primary-color);
+  font-size: var(--fs-1);
   margin: 1rem 0;
 }
 
@@ -532,7 +523,10 @@ form div.form-input-pair > div {
 input[type=text] {
   font-size: var(--fs-1);
   width: 40rem;
-  max-width: 95%
+  max-width: 95%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
 }
 
 textarea {
@@ -540,4 +534,32 @@ textarea {
     height: calc(3 * 1.5 * var(--fs-1));
     font-size: var(--fs-1);
     max-width: 95%;
+      border: none;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+
+/* View photo page for galleries */
+picture img.photo {
+  max-width: 100%;
+  display: block;
+  margin: 1rem auto;
+}
+
+div.photo-info {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  margin: 1rem 0;
+}
+
+div.gal-nav {
+  margin: 0 auto;
+  background: black;
+  color: white;
+  display: grid;
+  grid-template-columns: 5rem 10rem 5rem;
+  gap: 1rem;
+  justify-items: center;
+  justify-content: center;
+  justify-self: center;
 }

@@ -1,0 +1,43 @@
+/* pictures.css for pictures and videos page */
+
+video 
+{ 
+  display: block;
+  margin: 10px auto; 
+  width: 100%;
+  max-width: 800px;
+}
+
+
+
+ul.gallerylist
+{
+  list-style: none;
+  padding: 0;
+}
+
+table.youtube tr td { vertical-align: top }
+
+table.youtube tr td:first-child
+{
+  white-space: nowrap;
+}
+
+
+@media screen and ( max-width: 600px)
+{
+  table.youtube tr td 
+  { 
+    display: block;
+    padding: 0 0 5px 0;
+    background: white;
+  }
+  table.youtube tr td:first-child 
+  {
+    border-top: 2px solid #ccc;
+    padding: 5px 0 0;
+  }
+}
+
+
+div.editpanel { background: white; color: black }
