@@ -1,7 +1,11 @@
 /* CSS for public pages */
 
-/* Todo macintosh style headings and dividers: try multipole thin lines */
+/* Todo: macintosh style headings and dividers: try multiple thin lines */
+/* Todo: Set margins and possibly widths using clamp to ensure full reponsiveness */
+/* Todo: Simplefy CCS for buttons by inheriting css for sign-in and big-button from submit-button. */
+/* Todo: Will server side errors ever appear in the public pages? If yes, then ypdate the relevant CSS and HTML */
 
+/* variables for all colors and font sizes */
 :root {
   --primary-bg-color: #000000;
   --primary-color: #ffffff;
@@ -18,6 +22,7 @@
   --fs-4: clamp(1.95rem, calc(1.81rem + 0.71vw), 2.66rem)
 }
 
+/* CSS for common elements */
 html {
     margin: 0;
     padding: 0;
@@ -26,6 +31,17 @@ html {
 * {
   box-sizing: border-box;
   font-family: inherit;
+}
+
+body {
+  background-image: url("/images/circles_interlaced.png");
+  background-repeat: repeat;
+  font-family: Verdana, Arial, sans-serif;
+  color: var(--primary-color);
+  padding: 0;
+  margin: 0 auto;
+  width: 70%;
+  max-width: 70rem;
 }
 
 h1{
@@ -46,17 +62,6 @@ h3{
 p, table, a, button {
   font-size: var(--fs-1);
   line-height: 1.5;
-}
-
-body {
-  background-image: url("/images/circles_interlaced.png");
-  background-repeat: repeat;
-  font-family: Verdana, Arial, sans-serif;
-  color: var(--primary-color);
-  padding: 0;
-  margin: 0 auto;
-  width: 70%;
-  max-width: 70rem;
 }
 
 h1, h2, h3 {
@@ -131,25 +136,8 @@ a.sign-in-button {
   cursor: pointer;
 }
 
-/*
-.forms {
-  gap: 1rem;
-  width: 75%;
-  max-width: 75rem;
-  display: flex;
-  flex-wrap: wrap;
-}*/
 
-a.big-button {
-  font-size: var(--fs-2);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 2rem;
-  color: var(--reverse-color);
-  background-color: var(--reverse-bg-color);
-  text-decoration: none;
-}
-
+/* Page content */
 .content {
   border: none;
   background-color: var(--primary-bg-color);
@@ -237,36 +225,8 @@ a.big-button {
   color: var(--primary-color);
 }
 
-/* Index page next performance table */
-.next-performances-table {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  row-gap: 0.75rem;
-  text-align: left;
-  margin: 0 auto;
-  max-width: 50rem;
-  font-size: var(--fs-1);
-}
-
-/* embeded YouTube videos */
-.youtube {
-  position: relative;
-  overflow: hidden;
-  width: 90%;
-  padding-top: 56.25%;
-  margin: auto;
-  border: none;
-  background-color: var(--primary-bg-color);
-}
-
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+a.email /* for mailto: links */ {
+  font-family: monospace;
 }
 
 /* footer */
@@ -299,7 +259,7 @@ a.big-button {
   vertical-align: middle
 }
 
-/* slideshow */
+/* image slideshow */
 .slideshow-container {
   margin: 2rem auto;
 }
@@ -364,8 +324,50 @@ a.big-button {
   to {opacity: 1}
 }
 
+/* Embeded YouTube videos */
 
-/* Programme page */
+.youtube {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  padding-top: 56.25%;
+  margin: auto;
+  border: none;
+  background-color: var(--primary-bg-color);
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Index page specific */
+a.big-button {
+  font-size: var(--fs-2);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  color: var(--reverse-color);
+  background-color: var(--reverse-bg-color);
+  text-decoration: none;
+}
+
+.next-performances-table {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  row-gap: 0.75rem;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 50rem;
+  font-size: var(--fs-1);
+}
+
+/* Programme page specific */
 
 div.prog-outer {
   background: var(--primary-bg-color);
@@ -410,6 +412,91 @@ table.prog tr.old-date td {
   color: #666;
 }
 
+/* Gallery page specific */
+
+div.gallery-list {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 1rem;
+  height: auto;
+}
+
+.gallery-link i {
+  font-size: var(--fs-2);
+  color: var(--primary-color);
+  padding-right: 2rem;
+}
+
+.gallery-link a {
+  display: block;
+  padding: 0.75rem;
+  color: var(--primary-link-color);
+}
+
+.gallery-link a:visited {
+  color: var(--primary-link-visited-color);
+}
+
+.gallery-link a:hover {
+  color: var(--primary-link-hover-color);
+}
+
+div.gal-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+div.thumb {
+  height: auto;
+  background: var(--primary-bg-color);
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-wrap: wrap;
+  color: var(--primary-color);
+  max-width: 45%;
+}
+
+div.thumb a {
+display: block;
+padding: 0.5rem;
+margin: auto;
+}
+
+div.thumb img {
+  display: block;
+  margin: auto;
+  max-height: 130px;
+  max-width: 100%;
+  aspect-ratio: auto;
+}
+
+/* video page specific */
+
+video {
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 700px;
+}
+
+.video-link {
+  margin-bottom: 1rem;
+}
+
+.video-link i {
+  font-size: var(--fs-2);
+  color: var(--primary-color);
+  padding-right: 2rem;
+}
+
+.video-link p {
+  padding-left: 2rem;
+  margin: 0;
+}
+
 /* For screens less than 480px wide */
 @media screen and ( max-width: 480px ) {
   div.wide_nav {
@@ -427,8 +514,7 @@ table.prog tr.old-date td {
   }
 }
 
-
-/* From style.css */
+/* From orignal style.css */
 /* error pages */
 body.errorpage
 {
@@ -487,7 +573,7 @@ div.msgbox
   background: #f4fff4;
 }
 
-/**************** general datarec form ***********/
+/* General data record forms */
 .form-container {
   width: 40rem;
   max-width: 95%;
