@@ -1,0 +1,18 @@
+/* music.css */
+.musicians_image {
+  display: table;
+  margin: 0 auto;
+
+  /*float: right;
+  clear: both;*/
+
+
+}
+.musicians_image img {
+  max-width: 100%;
+}
+figcaption {
+  display:table-caption;
+  caption-side:bottom;
+}
+
