@@ -59,7 +59,7 @@ h3{
   line-height: 1.4;
 }
 
-p, table, a, button {
+p, table, a, button, ul, li {
   font-size: var(--fs-1);
   line-height: 1.5;
 }
@@ -70,6 +70,26 @@ h1, h2, h3 {
 
 h1, h2 {
   text-align: center;
+}
+
+blockquote {
+  font-size: var(--fs-1);
+  background-color: var(--reverse-bg-color);
+  color: var(--reverse-color);
+  padding: 0.5rem;
+  line-height: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+q {
+  font-style: italic;
+}
+li {
+  padding: 0.5rem;
+}
+
+ul li::marker {
+  font-size: 2rem;
 }
 
 a {
