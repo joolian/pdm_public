@@ -1,0 +1,32 @@
+/* Specific CSS for rob-tributes.html */
+figure.full {
+  margin: 1rem auto;
+}
+figure.full img{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+figure.full figcaption {
+  text-align: center;
+}
+
+img.half {
+  display: block;
+  float: right;
+  max-width: 50%;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.caption {
+  margin: auto;
+}
+.poem {
+  padding-left: 1rem;
+  font-style: italic;
+  line-height: 2rem;
+}
+
+div.clear-fix {
+  overflow: auto;
+}
