@@ -525,6 +525,9 @@ video {
   body {
     width: 100%;
   }
+  div.newsitem {
+    /*width: 100%;*/
+  }
 }
 
 /* For screens wider than 480px */
