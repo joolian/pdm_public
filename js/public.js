@@ -28,13 +28,13 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-// mobile nav
+
+// top nav
 function myFunction() {
-// toggles mobile menu display //
-  var x = document.getElementById("menuLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
+  var x = document.getElementById("myTopnav");
+  if (x.className === "top-nav") {
+    x.className += " responsive";
   } else {
-    x.style.display = "block";
+    x.className = "top-nav";
   }
 }
