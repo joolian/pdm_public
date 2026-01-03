@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Home Page | Pig Dyke Molly</title>
+    <title>Gallery | Pig Dyke Molly</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Anahata <anahata@treewind.co.uk>" name="Author">
     <meta content="Pig Dyke, Pig Dyke Molly, molly dancers,
     molly dance, folk dance, molly dancing, dance classes, dance group,
@@ -11,122 +11,103 @@
     <meta content="Pig Dyke Molly are a Molly Dance team based in Peterborough, famous for their black and white attire and facepaint, and quirky dances and music."
           name="description">
     <link href="css/public.css" rel="stylesheet">
-    <link href="css/gallery.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://pigdyke.co.uk/gallery' rel='canonical'>
 </head>
 <body>
-  <div class="header">
-      <div class="logo">
-          <h1>Pig Dyke Molly  <span>Dancers from the Fens in Glorious Black and White</span></h1>
-      </div>
-      <div class="sign-in-link">
-          <p><a class="sign-in-button" href="private/" title="members only (login required)">Sign in</a></p>
-      </div>
-  </div>
-  <div class="wide_nav">
-      <ul>
-          <li><a href="index.html" title="index">Home</a></li>
-          <li><a href="join_us.html" title="Join">Join</a></li>
-          <li><a href="/what-is-molly" title="History of Molly
-      Dancing and Pig Dyke, and collected dance notation and music">What is Molly</a></li>
-          <li><a href="programme.html" title="Where to see us: festivals, pub nights etc.">Programme</a></li>
-          <li><a class="active "href="gallery.html" title="Photo Gallery">Gallery</a></li>
-          <li><a href="/videos" title="Videos, You Tube and other">Video</a></li>
-          <li><a href="/music" title="Music: history, Band, CDs, downloads">Music</a></li>
-          <li><a href="/dance" title="Collected Dance Notation and Music">Dance</a></li>
-          <li><a href="/news" title="News about Pig Dyke, quotes from the press and
-      bystanders">News</a></li>
-          <li><a href="/quotes" title="Things people have said about us">Quotes</a></li>
-          <li><a href="/contact" title="Where we practice, how to contact us and
-      links to our friends">Contact</a></li>
-      </ul>
-  </div>
-  <div class="mob_nav">
-          <a href="Index" class="active" title="Pig Dyke Molly">Home</a>
-    <div id="menuLinks">
+<header>
+    <div class="logo">
+        <h1>Pig Dyke Molly <span>Dancers from the Fens in Glorious Black and White</span></h1>
+    </div>
+    <div class="sign-in-link">
+        <p>
+            <a class="sign-in-button" href="private/" title="members only (login required)">Sign in</a>
+        </p>
+    </div>
+</header>
+<nav>
+    <div class="top-nav" id="myTopnav">
         <a href="index.html">Home</a>
         <a href="join_us.html" title="Join">Join</a>
-        <a href="/what-is-molly" title="History of Molly">What is Molly</a>
+        <a href="what-is-molly.html" title="History of Molly">What is Molly</a>
         <a href="programme.html" title="Where to see us: festivals, pub nights etc.">Programme</a>
         <a class="active" href="gallery.html" title="Photo Gallery">Gallery</a>
-        <a href="/videos" title="Videos, You Tube and other">Video</a>
-        <a href="/music" title="Music: history, Band, CDs, downloads">Music</a>
-        <a href="/dance" title="Collected Dance Notation and Music">Dance</a>
-        <a href="/news" title="News about Pig Dyke, quotes from the press and
-      bystanders">News</a>
-          <a href="/quotes" title="Things people have said about us">Quotes</a>
-          <a href="/contact" title="Where we practice, how to contact us and
-      links to our friends">Contact</a>
-          <a href="private/" title="members only (login required)">Private</a>
+        <a href="videos.html" title="Videos, You Tube and other">Video</a>
+        <a href="music.html" title="Music: history, Band, CDs, downloads">Music</a>
+        <a href="dance.html" title="Collected Dance Notation and Music">Dance</a>
+        <a href="news.html" title="News about Pig Dyke, quotes from the press and
+        bystanders">News</a>
+        <a href="quotes.html" title="Things people have said about us">Quotes</a>
+        <a href="contact.html" title="Where we practice, how to contact us and
+        links to our friends">Contact</a>
+        <a class="icon" href="javascript:void(0);" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-  <div class="content">
+</nav>
+<main>
     <h1>Add photo</h1>
     <div class="form-container">
-      <p>Adding to gallery 1</p>
-      <form action="/gallery" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="action" value="photo_add_submit"><input type="hidden" name="id" value=""><input type="hidden" name="csrftoken" value="eVIQ3HKm0dyNXHIVXqo4AAhXpuC7DiZyeDlgWhvO">
-        <input type="hidden" name="gallery" value="1">
-        <div class="form-input-pair">
-          <div>
-            Title:
-          </div>
-            <div>
-            <input  type="text" name="title" value="">
-          </div>
-        </div>
-        <div class="form-input-pair">
-          <div>
-            Description:
-          </div>
-          <div>
-            <textarea name=caption></textarea>
-          </div>
-        </div>
-        <div class="form-input-pair">
-          <div>
-            Uploaded by:
-          </div>
-          <div>
-            <input  type="text" name="uploader" value="Julian">
-          </div>
-        </div>
-        <div class="form-input-pair">
-          <div>
-            Image file:
-          </div>
-          <div>
-            <input type="file" name="photofile">
-          </div>
-        </div>
-        <input class="submit-button" type="submit" value="Add photo">
-      </form>
-      <form action="/gallery" method="GET">
-        <input class="submit-button" type="submit" value="Cancel" >
-      </form>
+        <p>Adding to gallery 1</p>
+        <form action="/gallery" enctype="multipart/form-data" method="POST">
+            <input name="action" type="hidden" value="photo_add_submit"><input name="id" type="hidden" value=""><input
+                name="csrftoken" type="hidden" value="eVIQ3HKm0dyNXHIVXqo4AAhXpuC7DiZyeDlgWhvO">
+            <input name="gallery" type="hidden" value="1">
+            <div class="form-input-pair">
+                <div>
+                    Title:
+                </div>
+                <div>
+                    <input name="title" type="text" value="">
+                </div>
+            </div>
+            <div class="form-input-pair">
+                <div>
+                    Description:
+                </div>
+                <div>
+                    <textarea name=caption></textarea>
+                </div>
+            </div>
+            <div class="form-input-pair">
+                <div>
+                    Uploaded by:
+                </div>
+                <div>
+                    <input name="uploader" type="text" value="Julian">
+                </div>
+            </div>
+            <div class="form-input-pair">
+                <div>
+                    Image file:
+                </div>
+                <div>
+                    <input name="photofile" type="file">
+                </div>
+            </div>
+            <input class="submit-button" type="submit" value="Add photo">
+        </form>
+        <form action="/gallery" method="GET">
+            <input class="submit-button" type="submit" value="Cancel">
+        </form>
     </div>
-  </div>
-<div class="footer">
+</main>
+<footer>
     <div class="socials">
-        <a href="https://bsky.app/profile/pigdykemolly.bsky.social"><img alt="BlueSky logo"
-                                                                         src="images/bluesky_white_50.png">
-            BlueSky</a>
-        <a href="https://www.facebook.com/PigDyke"><img alt="Facebook logo" src="images/facebook_white_50.png">
-            Facebook
+        <a href="https://bsky.app/profile/pigdykemolly.bsky.social">
+            <img alt="BlueSky logo" src="images/bluesky_white_50.png">BlueSky
         </a>
-        <a href="https://www.tiktok.com/@pdmolly"><img alt="TikTok logo" src="images/tiktok_white_50.png">
-            TikTok
+        <a href="https://www.facebook.com/PigDyke">
+            <img alt="Facebook logo" src="images/facebook_white_50.png">Facebook
         </a>
-        <a href="https://www.instagram.com/pigdykemolly/"><img alt="Instagram logo"
-                                                               src="images/instagram_white_50.png">
-            Instagram
+        <a href="https://www.tiktok.com/@pdmolly">
+            <img alt="TikTok logo" src="images/tiktok_white_50.png">TikTok
+        </a>
+        <a href="https://www.instagram.com/pigdykemolly/">
+            <img alt="Instagram logo" src="images/instagram_white_50.png">Instagram
         </a>
     </div>
-</div>
+</footer>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/2b598f6f01.js"></script>
 <script src="js/public.js"></script>
 </body>
 </html>

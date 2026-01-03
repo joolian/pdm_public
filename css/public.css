@@ -182,7 +182,7 @@ main {
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 0.5rem 0.5rem;
   text-decoration: none;
   font-size: 17px;
 }
@@ -472,10 +472,116 @@ video {
   margin: 0;
 }
 
+/* Specific to Music page */
+
+.musicians_image {
+  display: table;
+  margin: 0 auto;
+}
+
+.musicians_image img {
+  max-width: 100%;
+}
+
+figcaption {
+  display: table-caption;
+  caption-side: bottom;
+}
+
+/* Specific to News page */
+
+.news-item {
+  margin:  0 auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+img.news-pic {
+  display: block;
+  max-width: 100%;
+   padding: 1rem;
+  margin: 0 auto;
+}
+
 /* specific to Quotes page */
 
 .quote {
   border-bottom: 1px solid var(--primary-color);
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.quote:last-child {
+  border: none;
+}
+
+/* Specific to Chris tribute page */
+
+.tribute-intro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+
+}
+.tribute-intro div {
+  width: 400px;
+}
+
+.tribute-intro-pic {
+  max-width: 100%;
+  flex-shrink: 2;
+  flex-grow: 0;
+}
+
+.tribute-intro-text {
+  flex-shrink: 1;
+  flex-grow: 5;
+}
+
+.tribute-intro img {
+  max-width: 100%;
+}
+
+.tribute-intro-text p {
+  padding: 1rem;
+  line-height: 2rem;
+}
+
+/* Specific to Rob tribute page */
+figure.full {
+  margin: 1rem auto;
+}
+
+figure.full img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+figure.full figcaption {
+  text-align: center;
+  display: block;
+}
+
+img.half {
+  display: block;
+  float: right;
+  max-width: 50%;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.poem {
+  padding-left: 1rem;
+  font-style: italic;
+  line-height: 2rem;
+}
+
+div.clear-fix {
+  overflow: auto;
 }
 
 /* For screens less than 480px wide */
@@ -485,9 +591,6 @@ video {
   }
   body {
     width: 100%;
-  }
-  div.newsitem {
-    /*width: 100%;*/
   }
 }
 
@@ -602,6 +705,7 @@ div.msgbox
   border-radius: 1rem;
   color: var(--reverse-color);
   background-color: var(--reverse-bg-color);
+  cursor: pointer;
 }
 
 input[type="submit"].submit-button {
