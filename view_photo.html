@@ -47,11 +47,11 @@
 <main>
     <h1>Photo Gallery</h1>
     <div class="gal-nav">
-    <!--
-    For the first image in the gallery there will be no back button, so &nbsp
-    is used instead to ensure the grid used to display the submit buttons will have
-    three columns
-    -->
+        <!--
+        For the first image in the gallery there will be no back button, so &nbsp
+        is used instead to ensure the grid used to display the submit buttons will have
+        three columns
+        -->
         <form action="/gallery" method="GET">
             <input name="id" type="hidden" value="1">
             <input name="action" type="hidden" value="show&lowbar;photo">
@@ -94,27 +94,55 @@
     </form>
     <picture>
         <source srcset='images/gallery_test/photos/1.avif' type='image/avif'>
-        <img class="photo" alt="1993 &copy; Reproduced by courtesy of the Peterborough Evening Telegraph"
+        <img alt="1993 &copy; Reproduced by courtesy of the Peterborough Evening Telegraph" class="photo"
              src="pics/2.jpg">
     </picture>
+    </main>
     <footer>
-    <div class="socials">
-        <a href="https://bsky.app/profile/pigdykemolly.bsky.social">
-            <img alt="BlueSky logo" src="images/bluesky_white_50.png">BlueSky
-        </a>
-        <a href="https://www.facebook.com/PigDyke">
-            <img alt="Facebook logo" src="images/facebook_white_50.png">Facebook
-        </a>
-        <a href="https://www.tiktok.com/@pdmolly">
-            <img alt="TikTok logo" src="images/tiktok_white_50.png">TikTok
-        </a>
-        <a href="https://www.instagram.com/pigdykemolly/">
-            <img alt="Instagram logo" src="images/instagram_white_50.png">Instagram
-        </a>
-    </div>
-</footer>
-<script src="https://kit.fontawesome.com/2b598f6f01.js" crossorigin="anonymous"></script>
-<script src="js/public.js"></script>
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-column">
+                    <a class="footer-link" href="join_us.html" title="Join_us.html">Join us</a>
+                </div>
+                <div class="footer-column">
+                    <a class="footer-link" href="contact.html#book-us" title="Join_us.html">Book us</a>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-column">
+                    <a class="footer-social" href="https://www.facebook.com/PigDyke">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+                <div class="footer-column">
+                    <a class="footer-social" href="https://www.instagram.com/pigdykemolly/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="footer-column">
+                    <a class="footer-social" href="https://www.tiktok.com/@pdmolly">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+                <div class="footer-column">
+                    <a class="footer-social" href="https://bsky.app/profile/pigdykemolly.bsky.social">
+                        <i class="fa-brands fa-bluesky"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-row">
+                <div class="footer-column">
+                    <span class="copyright">&copy; Pig Dyke Molly</span>
+                </div>
+                <div class="footer-column">
+                    <span><a class="footer-email"
+                             href="mailto:webmaster@pigdyke.co.uk">webmaster@pigdyke.co.uk</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/2b598f6f01.js"></script>
+    <script src="js/public.js"></script>
 </main>
 </body>
 </html>

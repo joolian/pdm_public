@@ -6,7 +6,7 @@
 /* Todo: Will server side errors ever appear in the public pages? If yes, then ypdate the relevant CSS and HTML */
 
 /* variables for all colors and font sizes */
-:root {
+/*:root {
   --primary-bg-color: #000000;
   --primary-color: #ffffff;
   --reverse-bg-color: #ffffff;
@@ -20,8 +20,22 @@
   --fs-2: clamp(1.25rem, calc(1.20rem + 0.25vw), 1.50rem);
   --fs-3: clamp(1.56rem, calc(1.48rem + 0.44vw), 2.00rem);
   --fs-4: clamp(1.95rem, calc(1.81rem + 0.71vw), 2.66rem)
+}*/
+:root {
+  --primary-bg-color: #ffffff;
+  --primary-color: #000000;
+  --reverse-bg-color: #000000;
+  --reverse-color: #ffffff;
+  --warning-color: #E7180B;
+  --primary-link-color: #5A9CED;
+  --greyed-bg-colr: #CCD1D1;
+  --primary-link-hover-color: #388df5;
+  --primary-link-visited-color: #83b2eb;
+  --fs-1: clamp(1.00rem, calc(0.98rem + 0.13vw), 1.13rem);;
+  --fs-2: clamp(1.25rem, calc(1.20rem + 0.25vw), 1.50rem);
+  --fs-3: clamp(1.56rem, calc(1.48rem + 0.44vw), 2.00rem);
+  --fs-4: clamp(1.95rem, calc(1.81rem + 0.71vw), 2.66rem)
 }
-
 /* CSS for common elements */
 html {
     margin: 0;
@@ -124,7 +138,6 @@ a:hover {
   font-size: 2rem;
 }
 
-/* header */
 header {
   background-color: var(--reverse-bg-color);
   display: flex;
@@ -164,12 +177,15 @@ a.sign-in-button {
   cursor: pointer;
 }
 
-
 /* Page content */
 main {
   border: none;
   background-color: var(--primary-bg-color);
   padding: 1.25rem;
+}
+
+nav {
+  background-color: var(--reverse-bg-color)
 }
 
 .top-nav {
@@ -180,7 +196,7 @@ main {
 .top-nav a {
   float: left;
   display: block;
-  color: black;
+  color: var(--reverse-color);
   text-align: center;
   padding: 0.5rem 0.5rem;
   text-decoration: none;
@@ -188,13 +204,13 @@ main {
 }
 
 .top-nav a:hover {
-  background-color: black;
-  color: white;
+  background-color: var(--reverse-color);
+  color: var(--primary-color);
 }
 
 .top-nav a.active {
-  background-color: black;
-  color: white;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-color);
 }
 
 .top-nav .icon {
@@ -205,34 +221,78 @@ a.email /* for mailto: links */ {
   font-family: monospace;
 }
 
-/* footer */
 footer {
-  border: none;
-  background-color: var(--primary-bg-color);
-  border-top: 2px solid var(--primary-color);
+  display: flex;
+  background-color: var(--reverse-bg-color);
+  border-top: 2px solid var(--reverse-color);
   border-left: none;
   border-right: none;
   border-bottom: none;
+  color: white;
+  padding: 0rem 1rem;
 }
 
-.socials {
-  display: flex;
-  justify-content: space-evenly;
-  background: black;
-  color: var(--primary-color);
-  text-align: left;
-  padding: 1rem;
-}
-
-.socials a {
-  display: block;
-  text-align: center;
+footer a {
+  color: var(--reverse-color);
   text-decoration: none;
-  color: var(--primary-color);
+  transition: color 0.3s;
 }
 
-.socials img {
-  vertical-align: middle
+footer a:visited {
+  color: var(--reverse-color);
+}
+
+footer a:link {
+  color: var(--reverse-color);
+}
+footer a:hover {
+  color: var(--primary-link-hover-color);
+}
+
+.container {
+  width: 1200px;
+  margin: 1rem auto;
+}
+
+.footer-row {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.footer-column {
+  flex-basis: 200px;
+  flex-grow: 1;
+  text-align: center;
+  padding: 0rem 0;
+  word-break: break-all;
+}
+
+.footer-link {
+  display: block;
+  font-size: var(--fs-2);
+  width: max-content;
+  margin: 0 auto;
+}
+
+.footer-bottom {
+  display: flex;
+}
+
+.copyright {
+  font-size: var(--fs-1);
+  color: var(--reverse-color);
+}
+
+.footer-social {
+  font-size: var(--fs-4);
+}
+
+a.footer-email{
+  color: var(--reverse-color);
+}
+
+a.email {
+  font-family: monospace;
 }
 
 /* image slideshow */
@@ -421,6 +481,7 @@ div.gal-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  margin: 2rem 0;
 }
 
 div.thumb {
@@ -481,6 +542,7 @@ video {
 
 .musicians_image img {
   max-width: 100%;
+  border-radius: 0.5rem;
 }
 
 figcaption {
@@ -500,14 +562,15 @@ figcaption {
 img.news-pic {
   display: block;
   max-width: 100%;
-   padding: 1rem;
-  margin: 0 auto;
+  /*padding: 0.5rem;*/
+  margin: 0.5rem auto;
+  border-radius: 0.5rem;
 }
 
 /* specific to Quotes page */
 
 .quote {
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
   margin-top: 3rem;
   padding-bottom: 2rem;
 }
@@ -737,17 +800,17 @@ input[type=text] {
 }
 
 textarea {
-    width: 40rem;
-    height: calc(3 * 1.5 * var(--fs-1));
-    font-size: var(--fs-1);
-    max-width: 95%;
-      border: none;
+  width: 40rem;
+  height: calc(3 * 1.5 * var(--fs-1));
+  font-size: var(--fs-1);
+  max-width: 95%;
+  border: none;
   border-radius: 0.5rem;
   padding: 0.3rem;
 }
 
 /* View photo page for galleries */
-picture img.photo {
+  picture img.photo {
   max-width: 100%;
   display: block;
   margin: 1rem auto;
@@ -761,7 +824,7 @@ div.photo-info {
 
 div.gal-nav {
   margin: 0 auto;
-  background: black;
+  background: var(--primary-bg-color);
   color: white;
   display: grid;
   grid-template-columns: 5rem 10rem 5rem;

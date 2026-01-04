@@ -34,9 +34,9 @@ footer a:hover {
   margin: 0 auto;
 }
 
-.footer-main {
+.footer-row {
   display: flex;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 
 .footer-column {
@@ -67,6 +67,10 @@ footer a:hover {
 .footer-social {
   font-size: 2rem;
   margin-left: 2rem;
+}
+
+a.email /* for mailto: links */ {
+  font-family: monospace;
 }
 
 @media screen and ( max-width: 480px ) {
