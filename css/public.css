@@ -27,10 +27,11 @@
   --reverse-bg-color: #000000;
   --reverse-color: #ffffff;
   --warning-color: #E7180B;
-  --primary-link-color: #5A9CED;
+  --primary-link-color: #2d56b5; /*#5A9CED;*/
   --greyed-bg-colr: #CCD1D1;
-  --primary-link-hover-color: #388df5;
-  --primary-link-visited-color: #83b2eb;
+  --primary-link-hover-color: #0e45c7;/*#388df5;*/
+  --primary-link-visited-color: #5485f7; /*#83b2eb*/
+  --reverse-bg-link-hover-color: #88a3e3;
   --fs-1: clamp(1.00rem, calc(0.98rem + 0.13vw), 1.13rem);;
   --fs-2: clamp(1.25rem, calc(1.20rem + 0.25vw), 1.50rem);
   --fs-3: clamp(1.56rem, calc(1.48rem + 0.44vw), 2.00rem);
@@ -115,6 +116,7 @@ address {
 
 a {
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 a:link {
@@ -150,7 +152,7 @@ header {
 
 .logo h1 {
   padding-left: var(--fs-1);
-  font-size: var(--fs-2);
+  font-size: var(--fs-3);
   text-align: left;
   color: var(--reverse-color);
 }
@@ -164,6 +166,7 @@ header h1 span {
   color: var(--primary-color);
   min-width: fit-content;
   padding-right: var(--fs-1);
+  padding-left: var(--fs-1);
 }
 
 a.sign-in-button {
@@ -246,7 +249,7 @@ footer a:link {
   color: var(--reverse-color);
 }
 footer a:hover {
-  color: var(--primary-link-hover-color);
+  color: var(--reverse-bg-link-hover-color);
 }
 
 .container {
@@ -647,57 +650,8 @@ div.clear-fix {
   overflow: auto;
 }
 
-/* For screens less than 480px wide */
-@media screen and ( max-width: 480px ) {
-  div.wide_nav {
-    display: none;
-  }
-  body {
-    width: 100%;
-  }
-}
 
-/* For screens wider than 480px */
-@media screen and ( min-width: 480px ) {
-  div.mob_nav {
-    display: none;
-  }
-}
-@media screen and (max-width: 480px) {
-  .top-nav.responsive {position: relative;}
-  .top-nav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .top-nav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-@media screen and (max-width: 600px) {
-  .top-nav a:not(:first-child) {display: none;}
-  .top-nav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .top-nav.responsive {position: relative;}
-  .top-nav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .top-nav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-/* From orignal style.css */
+/* From original style.css */
 /* error pages */
 body.errorpage
 {
@@ -833,3 +787,48 @@ div.gal-nav {
   justify-content: center;
   justify-self: center;
 }
+
+@media screen and (max-width: 1280px) {
+  div.gallery-list{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body { width: 85% }
+}
+
+@media screen and (max-width: 600px) {
+  .top-nav a:not(:first-child) {display: none;}
+  .top-nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .top-nav.responsive {position: relative;}
+  .top-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .top-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.gallery-list { display:block; }
+}
+
+/* For screens less than 480px wide */
+@media screen and ( max-width: 480px ) {
+  body { width: 100%; }
+}
+
+
+
+
