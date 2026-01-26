@@ -298,10 +298,6 @@ a.footer-email{
   color: var(--reverse-color);
 }
 
-a.email {
-  font-family: monospace;
-}
-
 /* image slideshow */
 .slideshow-container {
   margin: 2rem auto;
@@ -319,10 +315,9 @@ a.email {
 }
 
 .slides img {
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
   width: 100%;
 }
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -766,7 +761,7 @@ input[type=text] {
   font-size: var(--fs-1);
   width: 40rem;
   max-width: 95%;
-  border: none;
+  border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
   padding: 0.3rem;
 }
@@ -776,7 +771,7 @@ textarea {
   height: calc(3 * 1.5 * var(--fs-1));
   font-size: var(--fs-1);
   max-width: 95%;
-  border: none;
+  border: 1px solid var(--primary-color);
   border-radius: 0.5rem;
   padding: 0.3rem;
 }

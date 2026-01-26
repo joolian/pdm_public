@@ -30,7 +30,7 @@ function showSlides(n) {
 
 
 // top nav
-function myFunction() {
+function topNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "top-nav") {
     x.className += " responsive";
