@@ -6,6 +6,8 @@
 /* Todo: Will server side errors ever appear in the public pages? If yes, then ypdate the relevant CSS and HTML */
 
 /* variables for all colors and font sizes */
+
+/* For a black background with white text */
 /*:root {
   --primary-bg-color: #000000;
   --primary-color: #ffffff;
@@ -21,22 +23,25 @@
   --fs-3: clamp(1.56rem, calc(1.48rem + 0.44vw), 2.00rem);
   --fs-4: clamp(1.95rem, calc(1.81rem + 0.71vw), 2.66rem)
 }*/
+
+/* For a white background with black text */
 :root {
   --primary-bg-color: #ffffff;
   --primary-color: #000000;
   --reverse-bg-color: #000000;
   --reverse-color: #ffffff;
   --warning-color: #E7180B;
-  --primary-link-color: #2d56b5; /*#5A9CED;*/
+  --primary-link-color: #2d56b5;
   --greyed-bg-colr: #CCD1D1;
-  --primary-link-hover-color: #0e45c7;/*#388df5;*/
-  --primary-link-visited-color: #5485f7; /*#83b2eb*/
+  --primary-link-hover-color: #0e45c7;
+  --primary-link-visited-color: #5485f7;
   --reverse-bg-link-hover-color: #88a3e3;
   --fs-1: clamp(1.00rem, calc(0.98rem + 0.13vw), 1.13rem);;
   --fs-2: clamp(1.25rem, calc(1.20rem + 0.25vw), 1.50rem);
   --fs-3: clamp(1.56rem, calc(1.48rem + 0.44vw), 2.00rem);
   --fs-4: clamp(1.95rem, calc(1.81rem + 0.71vw), 2.66rem)
 }
+
 /* CSS for common elements */
 html {
     margin: 0;
@@ -180,7 +185,6 @@ a.sign-in-button {
   cursor: pointer;
 }
 
-/* Page content */
 main {
   border: none;
   background-color: var(--primary-bg-color);
@@ -220,7 +224,7 @@ nav {
   display: none;
 }
 
-a.email /* for mailto: links */ {
+a.email {
   font-family: monospace;
 }
 
@@ -304,17 +308,21 @@ a.email {
 }
 
 .slideshow {
-  max-width: 616px;
+  max-width: 800px;
   padding: 0 2rem;
   position: relative;
   margin: auto;
-
 }
 
-.mySlides {
+.slides {
   display: none;
 }
 
+.slides img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  width: 100%;
+}
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -362,7 +370,7 @@ a.email {
   to {opacity: 1}
 }
 
-/* Embeded YouTube videos */
+/* Embedded YouTube videos */
 
 .youtube {
   position: relative;
@@ -385,6 +393,7 @@ a.email {
 }
 
 /* Index page specific */
+
 a.big-button {
   font-size: var(--fs-2);
   padding: 0.5rem 1rem;
@@ -570,7 +579,7 @@ img.news-pic {
   border-radius: 0.5rem;
 }
 
-/* specific to Quotes page */
+/* Specific to Quotes page */
 
 .quote {
   border-bottom: 2px solid var(--primary-color);
@@ -650,6 +659,14 @@ div.clear-fix {
   overflow: auto;
 }
 
+/* Specific to Contacts page */
+
+.google-map {
+    display: block;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin: 0 auto;
+}
 
 /* From original style.css */
 /* error pages */
@@ -711,6 +728,7 @@ div.msgbox
 }
 
 /* General data record forms */
+
 .form-container {
   width: 40rem;
   max-width: 95%;
