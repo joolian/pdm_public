@@ -104,6 +104,7 @@ blockquote {
 q {
   font-style: italic;
 }
+
 li {
   padding: 0.5rem;
 }
@@ -235,7 +236,7 @@ footer {
   border-left: none;
   border-right: none;
   border-bottom: none;
-  color: white;
+  color: var(--primary-color);
   padding: 0rem 1rem;
 }
 
@@ -792,7 +793,7 @@ div.photo-info {
 div.gal-nav {
   margin: 0 auto;
   background: var(--primary-bg-color);
-  color: white;
+  color: var(--primary-bg-color);
   display: grid;
   grid-template-columns: 5rem 10rem 5rem;
   gap: 1rem;
