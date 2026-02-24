@@ -1,5 +1,6 @@
 .idea/
 *.py
+*.rtf
 .DS_Store
 images/old/
 images/originals/

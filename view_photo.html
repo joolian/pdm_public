@@ -45,8 +45,7 @@
     </div>
 </nav>
 <main>
-    <h1>Photo Gallery</h1>
-    <div class="gal-nav">
+    <div class="photo-container">
         <!--
         For the first image in the gallery there will be no back button, so &nbsp
         is used instead to ensure the grid used to display the submit buttons will have
@@ -55,48 +54,34 @@
         <form action="/gallery" method="GET">
             <input name="id" type="hidden" value="1">
             <input name="action" type="hidden" value="show&lowbar;photo">
-            <input class="submit-button" type="submit" value="<">
+            <input class="gallery-btn gallery-next fa fa-chevron-right" type="submit" value="&#xf053;">
         </form>
         <form action="/gallery" method="GET">
             <input name="id" type="hidden" value="1">
             <input name="action" type="hidden" value="show&lowbar;gallery">
-            <input class="submit-button" type="submit" value="Return to Gallery">
+            <input class="gallery-btn gallery-close fa-solid fa-xmark" type="submit" value="&#xf00d;">
         </form>
         <form action="/gallery" method="GET">
             <input name="id" type="hidden" value="3">
             <input name="action" type="hidden" value="show&lowbar;photo">
-            <input class="submit-button" type="submit" value=">">
+            <input class="gallery-btn gallery-prev fa fa-chevron-left" type="submit" value="&#xf054;">
         </form>
+        <!-- <form action="/gallery" method="GET">
+            <input name="id" type="hidden" value="2">
+            <input name="action" type="hidden" value="photo&lowbar;edit&lowbar;form">
+            <input class="submit-button" type="submit" value="Edit">
+        </form> -->
+        <picture class="thing">
+            <source srcset='images/gallery_test/photos/1.avif' type='image/avif'>
+            <img alt="1993 &copy; Reproduced by courtesy of the Peterborough Evening Telegraph" class="photo"
+                 src="pics/2.jpg">
+        </picture>
+           <!--<picture class="thing">
+            <source srcset='images/index/PDM_Nogger_a.webp'>
+            <img alt="1993 &copy; Reproduced by courtesy of the Peterborough Evening Telegraph" class="photo"
+                 src="pics/2.jpg">
+        </picture>-->
     </div>
-    <div class="photo-info">
-        <div>Gallery:</div>
-        <div>The Archives - very old pics</div>
-    </div>
-    <div class="photo-info">
-        <div>Title:</div>
-        <div>1993</div>
-    </div>
-    <div class="photo-info">
-        <div>Description:</div>
-        <div>
-            1993 &copy; Reproduced by courtesy of the <a href="http://www.peterboroughtoday.co.uk/">Peterborough
-            Evening Telegraph</a>
-        </div>
-    </div>
-    <div class="photo-info">
-        <div>Uploaded by:</div>
-        <div>Anahata</div>
-    </div>
-    <form action="/gallery" method="GET">
-        <input name="id" type="hidden" value="2">
-        <input name="action" type="hidden" value="photo&lowbar;edit&lowbar;form">
-        <input class="submit-button" type="submit" value="Edit">
-    </form>
-    <picture>
-        <source srcset='images/gallery_test/photos/1.avif' type='image/avif'>
-        <img alt="1993 &copy; Reproduced by courtesy of the Peterborough Evening Telegraph" class="photo"
-             src="pics/2.jpg">
-    </picture>
     </main>
     <footer>
         <div class="container">

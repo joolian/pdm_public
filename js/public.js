@@ -1,6 +1,8 @@
 // Image slider
 let slideIndex = 1;
-showSlides(slideIndex);
+if (document.querySelector(".slides") != null) {
+   showSlides(slideIndex);
+}
 
 // Next/previous controls
 function plusSlides(n) {
