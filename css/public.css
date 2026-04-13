@@ -74,11 +74,12 @@ p, table, a, button, ul, li {
 
 blockquote {
   font-size: var(--fs-1);
-  background-color: var(--reverse-bg-color);
-  color: var(--reverse-color);
-  padding: 0.5rem;
+  /*background-color: var(--reverse-bg-color);*/
+  color: var(--primary-color);
+  font-style: italic;
   line-height: 1.5rem;
   border-radius: 0.5rem;
+  padding: 1rem 3rem;
 }
 
 q {
@@ -235,9 +236,10 @@ footer a:hover {
   color: var(--reverse-bg-link-hover-color);
 }
 
-.container {
+.footer-container {
   width: 1200px;
   margin: 0 auto;
+  padding: 1rem 0;
 }
 
 .footer-row {
@@ -275,6 +277,17 @@ footer a:hover {
 
 a.footer-email{
   color: var(--reverse-color);
+}
+
+@media (max-width: 600px)
+{
+  .footer-row.bottom-row {
+    flex-wrap: wrap;
+  }
+
+  .footer-row.bottom-row .footer-column {
+    flex-basis: 100%;
+  }
 }
 
 /* image slideshow */
@@ -611,8 +624,8 @@ img.news-pic {
 
 .quote {
   border-bottom: 2px solid var(--primary-color);
-  margin-top: 3rem;
-  padding-bottom: 2rem;
+  /*margin-top: 3rem;*/
+  padding: 1rem 0.5rem;
 }
 
 .quote:last-child {
@@ -628,7 +641,7 @@ img.news-pic {
   max-width: 100%;
   margin: 0 auto;
   justify-content: center;
-
+  padding: 0.5rem;
 }
 .tribute-intro div {
   width: 400px;
@@ -757,13 +770,13 @@ div.msgbox
 
 /* General data record forms */
 
-.form {
+.form-container {
   width: 40rem;
   max-width: 95%;
   padding: 1rem;
 }
 
-input[type="submit"].submit-button {
+::file-selector-button, input[type="submit"].submit-button {
   font-size: var(--fs-1);
   padding: .3rem 1rem;
   border: none;
@@ -807,8 +820,6 @@ textarea {
   border-radius: 0.5rem;
   padding: 0.3rem;
 }
-
-
 
 div.photo-info {
   display: grid;
