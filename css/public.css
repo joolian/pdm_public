@@ -172,6 +172,7 @@ a.sign-in-button {
 main {
     border: none;
     background-color: var(--primary-bg-color);
+    padding-bottom: 2rem;
 }
 
 nav {
