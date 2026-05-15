@@ -33,7 +33,7 @@ function showSlides(n) {
 
 // top nav
 function topNav() {
-  var x = document.getElementById("myTopnav");
+  var x = document.getElementById("top-nav");
   if (x.className === "top-nav") {
     x.className += " responsive";
   } else {

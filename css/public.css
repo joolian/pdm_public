@@ -477,6 +477,7 @@ div.gallery-list {
 }
 
 .gallery-thumbs {
+    padding-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -497,7 +498,7 @@ div.gallery-list {
 
 .photo-container {
     position: relative;
-    background-color: var(--gallery-image-background);
+    /*background-color: var(--gallery-image-background);*/
     padding: 1rem 0;
     width: 100%;
     margin: 0 auto;
@@ -701,6 +702,11 @@ img.half {
 
 div.clear-fix {
     overflow: auto;
+}
+
+/*Specific to Glens tribute page*/
+.tribute-video {
+    max-width: 30rem;
 }
 
 /* Specific to Contacts page */
